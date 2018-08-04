@@ -1,0 +1,25 @@
+<form class="uk-padding">
+    <fieldset class="uk-fieldset">
+  
+        <legend class="uk-legend">اضافة امنية</legend>
+  
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="اسم الامنية" name="title"  [(ngModel)]="data.name">
+        </div>
+    
+  
+        <div class="uk-margin">
+            <textarea class="uk-textarea" rows="5" placeholder="الوصف"  name="describe" [(ngModel)]="data.describe"></textarea>
+        </div>
+  
+        <div class="uk-margin">
+    <span class="uk-button uk-button-primary" type="button"><input type="file" (change)="upload($event)" eccept=".png,.jpg">Uploud</span>
+          
+      </div>
+  
+        <div class="uk-margin">
+          <button class="uk-button uk-button-primary" (click)="insertNews()" >اضافة</button>
+        </div>
+  
+    </fieldset>
+  </form>

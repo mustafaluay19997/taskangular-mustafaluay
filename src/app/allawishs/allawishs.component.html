@@ -1,0 +1,44 @@
+
+<div class="uk-padding" *ngFor="let item of itemArray">
+
+
+    <div class="uk-card uk-card-default uk-width-1-2@m">
+        <div class="uk-card-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <img class="" width="100%" height="100%" src="{{item.image}}">
+                </div>
+                <!-- <div class="uk-width-expand">
+                    <h3 class="uk-card-title uk-margin-remove-bottom">اسم الامنية : {{item.name}}</h3>
+                </div> -->
+            </div>
+        </div>
+        <div class="uk-card-body">
+                <p>اسم الامنية : {{item.name}}</p>
+                <br>
+         </div>
+        <div class="uk-card-body">
+            <p>الوصف : {{item.describe}}</p>
+        </div>
+
+        <div class="uk-card-footer">
+            <a class="uk-button uk-button-text" (click)="moreInfo(item.$key)">عرض معلومات الامنية</a>
+        </div>
+
+        <!-- <div class="uk-card-footer">
+                <a class="uk-button uk-button-text" (click)="showuid(item.uid)">عرض  المفتاح</a>
+        </div> -->
+
+        <!-- <div class="uk-card-footer" *ngIf="item.status">
+                <a class="uk-button uk-button-text" (click)="showuid(item.status)" >لم ذهب شخص لتحقيقها </a>
+        </div> -->
+
+        <div class="uk-card-footer" >
+                <a class="uk-button uk-button-text" (click)="moreInfo1(item.$key)"  >تحقيق الامنية</a>
+        </div>
+        <!-- " 
+            *ngIf="!item.status"
+        
+        -->
+      </div>
+</div>

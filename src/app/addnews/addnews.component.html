@@ -1,0 +1,27 @@
+<form class="uk-padding">
+  <fieldset class="uk-fieldset">
+
+      <legend class="uk-legend">اضافة منشور</legend>
+
+      <div class="uk-margin">
+          <input class="uk-input" type="text" placeholder="العنوان" name="title"  [(ngModel)]="data.title">
+      </div>
+      <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="المصدر" name="source" [(ngModel)]="data.source">
+      </div>
+
+      <div class="uk-margin">
+          <textarea class="uk-textarea" rows="5" placeholder="وصف"  name="describe" [(ngModel)]="data.describe"></textarea>
+      </div>
+
+      <div class="uk-margin">
+  <span class="uk-button uk-button-primary" type="button"><input type="file" (change)="upload($event)" eccept=".png,.jpg">Uploud</span>
+        
+    </div>
+
+      <div class="uk-margin">
+        <button class="uk-button uk-button-primary" (click)="insertNews()" >اضافة</button>
+      </div>
+
+  </fieldset>
+</form>

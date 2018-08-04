@@ -1,0 +1,35 @@
+<nav class="uk-navbar-container" uk-navbar>
+
+  <div class="uk-navbar-right">
+
+      <ul class="uk-navbar-nav">
+          <li class="uk-active" *ngIf="isLoggedIn"><a routerLink="/allnews">الصفحة الرئيسية</a></li>
+          <li *ngIf="!isLoggedIn"><a routerLink="/register" >تسجيل</a></li>
+          <li *ngIf="!isLoggedIn"><a routerLink="/login">الدخول</a></li>
+          <li><a routerLink="/allawishs">امنية</a></li>
+          <li *ngIf="isLoggedIn"><a routerLink="/allcontactpost">تواصل</a></li>
+          <!-- <li><a routerLink="/">المهارات</a></li> -->
+      </ul>
+
+  </div>
+
+  <div class="uk-navbar-left">
+
+      <ul class="uk-navbar-nav">
+          <li *ngIf="isLoggedIn">
+            <a routerLink="#">حسابك الشخصي</a>
+            <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a routerLink="/addnews">اضافة خبر</a></li>
+                    <li><a routerLink="/awish">اضافة امنية</a></li>
+                    <li><a routerLink="/contactpost">اضافة تواصل</a></li>
+                    <li><a routerLink="/userprofile">معلوماتك</a></li>
+                    <li><a routerLink="#" (click)="logout()">خروج</a></li>
+                </ul>
+            </div>
+        </li>
+      </ul>
+
+  </div>
+
+</nav>

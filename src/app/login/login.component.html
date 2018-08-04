@@ -1,0 +1,19 @@
+<form class="uk-padding">
+  <fieldset class="uk-fieldset">
+
+      <legend class="uk-legend">الدخول</legend>
+
+ 
+      <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="البريد الاكتروني" name="email" [(ngModel)]="email"  required>
+      </div>
+      <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="كلمة السر" name="password" [(ngModel)]="password" required>
+      </div>
+       
+      <div class="uk-margin">
+        <button class="uk-button uk-button-primary" (click)="myLogin()">الدخول</button>
+      </div>
+
+  </fieldset>
+</form>
