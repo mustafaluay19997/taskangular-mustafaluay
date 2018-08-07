@@ -1,7 +1,13 @@
-soan{
-    background: #3498db;
-    padding: 5px;
-     margin: 0 5px;
-      color: #fff;
-      border-radius: 5px;
+#div{
+    padding: 50px 0;
+    box-sizing: border-box;
+    text-align: right;
+}
+.card{
+    margin: 5px 0;
+    background: #fff;
+}
+img{
+    height: 200px;
+    width: 100%
 }

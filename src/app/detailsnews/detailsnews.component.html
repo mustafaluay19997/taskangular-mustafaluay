@@ -30,7 +30,7 @@
     </div> -->
 
 
-    <div class="uk-padding" *ngFor="let item of itemArray">
+    <!-- <div class="uk-padding" *ngFor="let item of itemArray">
 
             <div class="uk-child-width-1-2@m" uk-grid>
                     <div>
@@ -39,7 +39,7 @@
                                 <img src="{{item.image}}" alt="">
                             </div>
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">عنوان الخبر : {{item.title}}</h3>
+                                <h3 class="uk-card-title">عنوان الخبر : {{item.image}}</h3>
                                 <p>مصدر الخبر : {{item.source}}</p><hr>
                                 <p>وصف الخبر : {{item.describe}}</p>
                             </div>
@@ -50,4 +50,18 @@
                         
 
 
+    </div> -->
+
+
+    <div id="div">
+        <div class="container">
+            <div class="card mb-3" *ngFor="let item of itemArray">
+                <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.title}}</h5>
+                  <p class="card-text">{{item.source}}</p>
+                  <p class="card-text text-muted">{{item.describe}}</p>
+                </div>
+              </div>
+        </div>
     </div>

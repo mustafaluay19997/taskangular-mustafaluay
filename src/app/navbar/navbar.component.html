@@ -1,35 +1,50 @@
-<nav class="uk-navbar-container" uk-navbar>
 
-  <div class="uk-navbar-right">
-
-      <ul class="uk-navbar-nav">
-          <li class="uk-active" *ngIf="isLoggedIn"><a routerLink="/allnews">الصفحة الرئيسية</a></li>
-          <li *ngIf="!isLoggedIn"><a routerLink="/register" >تسجيل</a></li>
-          <li *ngIf="!isLoggedIn"><a routerLink="/login">الدخول</a></li>
-          <li><a routerLink="/allawishs">امنية</a></li>
-          <li *ngIf="isLoggedIn"><a routerLink="/allcontactpost">تواصل</a></li>
-          <!-- <li><a routerLink="/">المهارات</a></li> -->
-      </ul>
-
-  </div>
-
-  <div class="uk-navbar-left">
-
-      <ul class="uk-navbar-nav">
-          <li *ngIf="isLoggedIn">
-            <a routerLink="#">حسابك الشخصي</a>
-            <div class="uk-navbar-dropdown">
-                <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li><a routerLink="/addnews">اضافة خبر</a></li>
-                    <li><a routerLink="/awish">اضافة امنية</a></li>
-                    <li><a routerLink="/contactpost">اضافة تواصل</a></li>
-                    <li><a routerLink="/userprofile">معلوماتك</a></li>
-                    <li><a routerLink="#" (click)="logout()">خروج</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><i class="fas fa-smile-beam fa-2x"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/allnews" >الصفحة الرئيسية <span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/register" >تسجيل</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn">
+                <a class="nav-link" routerLink="/login">الدخول</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" routerLink="/allawishs" >امنية</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+                <a class="nav-link" routerLink="/allcontactpost" >تواصل</a>
+        </li>
+      
+       
       </ul>
 
-  </div>
+      <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown" *ngIf="isLoggedIn">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            حسابك الشخصي
+                    </a>    
+                 
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/addnews">اضافة خبر</a>
+                    <a class="dropdown-item" routerLink="/awish">اضافة امنية</a>
+                    <a class="dropdown-item" routerLink="/contactpost" >اضافة تواصل</a>
+                    <a class="dropdown-item" routerLink="/userprofile">معلوماتك</a>
 
-</nav>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" routerLink="#" (click)="logout()" >خروج</a>
+                  </div>
+
+                </li>
+
+      </ul>
+     
+    </div>
+  </nav>

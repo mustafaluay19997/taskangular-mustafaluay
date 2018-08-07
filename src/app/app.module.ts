@@ -24,6 +24,7 @@ import { DetailsnewsComponent } from './detailsnews/detailsnews.component';
 import { DetailawishComponent } from './detailawish/detailawish.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes:Routes = [ // new 
@@ -41,6 +42,7 @@ const routes:Routes = [ // new
   {path:'detailswish/:id',component:DetailawishComponent},
   {path:'userprofile',component:UserprofileComponent},
   {path:'userinfo/:id',component:UserinfoComponent},
+  {path:'footer',component:FooterComponent},
   
 ]
 
@@ -63,6 +65,7 @@ const routes:Routes = [ // new
     DetailawishComponent,
     UserprofileComponent,
     UserinfoComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

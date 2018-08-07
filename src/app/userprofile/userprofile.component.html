@@ -25,7 +25,8 @@
             
         </div>
         <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text" uk-toggle="target: #modal-example">تعديل</a>
+            <!-- <a href="#" class="uk-button uk-button-text" uk-toggle="target: #modal-example">تعديل</a> -->
+            <button type="button" class="btn btn-info" uk-toggle="target: #modal-example">تعديل</button>
       
           
 
@@ -42,7 +43,7 @@
         <legend class="uk-legend">التعديل</legend>
       
         <div class="uk-margin">
-            <span class="uk-button uk-button-primary" type="button"><input type="file" (change)="upload($event)" eccept=".png,.jpg">Uploud</span>
+            <span class="uk-button uk-button-primary" type="button"><input type="file" (change)="upload($event)" eccept=".png,.jpg">اختر صورة</span>
         </div>
         <div class="uk-margin">
             <input class="uk-input" type="text" placeholder="اسمك" name="name" [(ngModel)]="data.name">

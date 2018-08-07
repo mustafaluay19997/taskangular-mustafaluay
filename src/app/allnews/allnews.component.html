@@ -1,67 +1,25 @@
 
-<div class="uk-padding">
-        <button class="uk-button uk-button-primary" *ngIf="admin" (click)="go()">اضافة خبر</button>
+ <div class="uk-padding">
+        <div class="container">
+            <!-- <button class="uk-button uk-button-primary" *ngIf="admin" (click)="go()">اضافة خبر</button> -->
+        <button type="button" class="btn btn-success" *ngIf="admin" (click)="go()">اضافة خبر</button>
+        </div>
 </div>
 
-<div class="uk-padding" *ngFor="let item of itemArray">
 
+<div id="div">
 
-    <div class="uk-card uk-card-default uk-width-1-2@m">
-        <div class="uk-card-header">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-                <div class="uk-width-auto">
-                    <img class="uk-border-circle" width="200" height="20" src="{{item.image}}">
-                </div>
-                <div class="uk-width-expand">
-                    <h3 class="uk-card-title uk-margin-remove-bottom"><span style="background: #3498db;
-                        padding: 5px; margin: 0 5px; color: #fff;border-radius: 5px;">
-                            عنوان الخبر : 
-                    </span>{{item.title}}</h3>
+    <div class="container">
+        <div class="row">
+            <div class="card col-lg-4" *ngFor="let item of itemArray" >
+                <img class="card-img-top" src="{{item.image}}" alt="Card image cap" >
+                <div class="card-body">
+                  <h5 class="card-title"><p class="card-text">عنوان الخبر : {{item.title}}</p></h5>
+                  <p class="card-text">مصدر الخبر :  {{item.source}}</p>
+                  <p class="card-text"><button type="button" class="btn btn-primary" (click)="moreInfo(item.$key)">عرض معلومات الخبر</button></p>
                 </div>
             </div>
         </div>
-        <div class="uk-card-body">
-            <p><span>
-                مصدر الخبر :  
-            </span>
-                
-                {{item.source}}</p>
-        
-        </div>
-        <div class="uk-card-footer">
-            <a class="uk-button uk-button-text" (click)="moreInfo(item.$key)">عرض معلومات الخبر</a>
-        </div>
-      </div>
+    </div>
+
 </div>
-
-
-
-
-
-<!-- <div class="uk-padding">
-  <table class="uk-table uk-table-striped" >
-      <thead>
-          <tr>
-              <th style="text-align: right">المفتاح</th>
-              <th style="text-align: right">العنوان</th>
-              <th style="text-align: right">المصدر</th>
-              <th style="text-align: right">الوصف</th>
-              <th style="text-align: right">رابط</th>
-            
-          </tr>
-      </thead>
-      <tbody>
-          <tr *ngFor="let item of itemArray">
-              <td>{{item.$key}}</td>
-              <td>{{item.title}}</td>
-              
-              <td>{{item.source}}</td>
-              <td>{{item.describe}}</td>
-              <td>{{item.image}}</td>              
-        
-              
-          </tr>
-      </tbody>
-  </table>
-  
-</div> -->
