@@ -10,15 +10,32 @@
 <div id="div">
 
     <div class="container">
-        <div class="row">
-            <div class="card col-lg-4" *ngFor="let item of itemArray" >
+        <div class="row" >
+            <!-- <div class="card col-lg-3" *ngFor="let item of itemArray" >
                 <img class="card-img-top" src="{{item.image}}" alt="Card image cap" >
                 <div class="card-body">
                   <h5 class="card-title"><p class="card-text">عنوان الخبر : {{item.title}}</p></h5>
                   <p class="card-text">مصدر الخبر :  {{item.source}}</p>
                   <p class="card-text"><button type="button" class="btn btn-primary" (click)="moreInfo(item.$key)">عرض معلومات الخبر</button></p>
                 </div>
-            </div>
+            </div> -->
+
+           <div class="col-lg-3 mar" *ngFor="let item of itemArray">
+                <div class="card-deck" >
+                        <div class="card" >
+                          <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">{{item.title}}</h5>
+                            <p class="card-text">{{item.source}}</p>
+                          </div>
+                          <div class="card-footer">
+                                <button type="button" class="btn btn-primary" (click)="moreInfo(item.$key)">عرض معلومات الخبر</button>
+                          </div>
+                        </div>
+                      
+                      
+                      </div>
+           </div>
         </div>
     </div>
 

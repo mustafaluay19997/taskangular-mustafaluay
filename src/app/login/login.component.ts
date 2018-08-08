@@ -93,9 +93,10 @@ export class LoginComponent implements OnInit {
         if(auth){
           localStorage.setItem('uid',auth.uid)
         }
+        this.router.navigate(['/'])
       })
 
-      this.router.navigate(['home'])
+      
     }).catch(error =>{
       console.log(error);
       // alert('Email Or Password Is incorrect ):')
